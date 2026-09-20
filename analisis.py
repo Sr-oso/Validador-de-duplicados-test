@@ -35,10 +35,10 @@ tiempos_o_nlogn = []
 tiempos_o_n = []
 
 print(
-    f"{'N':>10} | "
-    f"{'O(N^2)':>13} | "
-    f"{'O(N log N)':>15} | "
-    f"{'O(N)':>12}")
+    f"{'n':>10} | "
+    f"{'o(n^2)':>13} | "
+    f"{'o(n log n)':>15} | "
+    f"{'o(n)':>12}")
 print("-" * 60)
 
 
@@ -90,17 +90,17 @@ for N in tamaños:
     resultado_a = (
         f"{tiempo_a:13.6f}"
         if tiempo_a is not None
-        else f"{'TIMEOUT':>13}")
+        else f"{'Timeout':>13}")
 
     resultado_b = (
         f"{tiempo_b:15.6f}"
         if tiempo_b is not None
-        else f"{'TIMEOUT':>15}")
+        else f"{'Timeout':>15}")
 
     resultado_c = (
         f"{tiempo_c:12.6f}"
         if tiempo_c is not None
-        else f"{'TIMEOUT':>12}")
+        else f"{'Timeout':>12}")
 
     print(
         f"{N:10d} | "
@@ -127,19 +127,19 @@ if tiempos_n2:
         tamaños_n2,
         tiempos_n2,
         "r-o",
-        label="Variante A - O(N²)")
+        label="Variante A para o(n²)")
 
 g1.plot(
     tamaños,
     tiempos_o_nlogn,
     "g-s",
-    label="Variante B - O(N log N)")
+    label="Variante B para o(n log n)")
 
 g1.plot(
     tamaños,
     tiempos_o_n,
     "b-^",
-    label="Variante C - O(N)")
+    label="Variante C para o(n)")
 
 g1.set_title("Tamaño vs Tiempo")
 g1.set_xlabel("Tamaño N")
@@ -153,19 +153,19 @@ if tiempos_n2:
         tamaños_n2,
         tiempos_n2,
         "r-o",
-        label="Variante A - O(N²)")
+        label="Variante A para o(n²)")
 
 g2.loglog(
     tamaños,
     tiempos_o_nlogn,
     "g-s",
-    label="Variante B - O(N log N)")
+    label="Variante B para o(n log n)")
 
 g2.loglog(
     tamaños,
     tiempos_o_n,
     "b-^",
-    label="Variante C - O(N)")
+    label="Variante C para o(n)")
 
 #Titulos pa los graficos en x y, titulo principal
 g2.set_title("Escala logarítmica")
