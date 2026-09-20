@@ -176,3 +176,21 @@ g2.grid(True, which="both", linestyle="--")
 
 plt.tight_layout()
 plt.show()
+
+#Buscar N* donde se desplaza al metodo anidado con la busqueda binaria
+n_estrella = None
+for N, tiempo_a, tiempo_b in zip(
+    tamaños,
+    tiempos_o_n2,
+    tiempos_o_nlogn):
+    if tiempo_a is not None and tiempo_b is not None:
+        if tiempo_b < tiempo_a:
+            n_estrella = N
+            break
+
+if n_estrella is not None:
+
+    print(f"N* es igual a = {n_estrella}")
+    print("En este tamaño, la búsqueda binaria presento un tiempo menor que la variante anidada")
+else:
+    print("No se encontro un N* dentro de lo que estamos procesando")
