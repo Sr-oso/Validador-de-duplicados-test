@@ -174,9 +174,6 @@ g2.set_ylabel("Tiempo (segundos)")
 g2.legend()
 g2.grid(True, which="both", linestyle="--")
 
-plt.tight_layout()
-plt.show()
-
 #Buscar N* donde se desplaza al metodo anidado con la busqueda binaria
 n_estrella = None
 for N, tiempo_a, tiempo_b in zip(
@@ -194,3 +191,6 @@ if n_estrella is not None:
     print("En este tamaño, la búsqueda binaria presento un tiempo menor que la variante anidada")
 else:
     print("No se encontro un N* dentro de lo que estamos procesando")
+
+plt.tight_layout()
+plt.show()
